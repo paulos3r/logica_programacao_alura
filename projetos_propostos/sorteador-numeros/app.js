@@ -7,20 +7,26 @@ function sortear(){
   let numeroSorteado = [];
   let numero;
 
-  for (let i=0; i<quantidade;i++){
-    numero = obterNumeroAleatorio(de,ate);
+  if(de >= ate){
+    alert('Valor DO NÚMERO deve ser vaior que o ATE O NÚMERO');
+    reiniciar();
+  }else{
 
-    while(numeroSorteado.includes(numero)){
+    for (let i=0; i<quantidade;i++){
       numero = obterNumeroAleatorio(de,ate);
+
+      while(numeroSorteado.includes(numero)){
+        numero = obterNumeroAleatorio(de,ate);
+      }
+
+      numeroSorteado.push( numero );
     }
 
-    numeroSorteado.push( numero );
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numeroSorteado}</label>`;
+
+    alterarStatusBotao();
   }
-
-  let resultado = document.getElementById('resultado');
-  resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numeroSorteado}</label>`;
-
-  alterarStatusBotao();
 }
 function obterNumeroAleatorio(min, max){
   /**
