@@ -22,7 +22,10 @@ function sortear(){
 
     numeroSorteado.push( numero );
   }
-
+  /**
+   * documentacao https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+  **/
+  numeroSorteado.sort();
   let resultado = document.getElementById('resultado');
   resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${numeroSorteado}</label>`;
 
