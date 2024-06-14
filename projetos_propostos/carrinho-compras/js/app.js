@@ -33,7 +33,7 @@ function adicionar(){
   totalGeral += preco;
 
   let valorCompraTotal = document.getElementById('valor-total');
-  valorCompraTotal.textContent = `R$ ${totalGeral}`
+  valorCompraTotal.textContent = `R$ ${totalGeral}`;
 
   document.getElementById('quantidade').value = 0;
 
@@ -42,4 +42,4 @@ function limpar(){
   totalGeral = 0;
   document.getElementById('lista-produtos').innerHTML = '';
   document.getElementById('valor-total').textContent = `RS 0`;
-  };
+};
