@@ -16,8 +16,6 @@ function adicionar(){
 
   amigos.push(amigo);
 
-  alert(listaAmigos.textContent);
-
   if (listaAmigos.textContent == ''){
     listaAmigos.textContent = amigo;
   }else{
@@ -28,13 +26,14 @@ function adicionar(){
 }
 
 function sortear(){
-  embaralha(amigos);
   let listaSorteio  = document.getElementById('lista-sorteio');
 
   if(amigos.length < 3){
     alert('necessario ter no minimo 3 pessoas participantes');
     return
   }
+
+  embaralha(amigos);
 
   for (let i = 0; i < amigos.length; i++){
     if (i  == amigos.length-1){
